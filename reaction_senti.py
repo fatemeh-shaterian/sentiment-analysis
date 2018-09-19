@@ -1,5 +1,5 @@
-# this file take output of senti-se and give the result of comparison tools output and reactions
-
+# this file take output of senti and give the result of comparison tools output and reactions
+#this program also use process folder as input
 import glob, os
 import csv
 import unicodecsv as csv
@@ -33,10 +33,13 @@ def writetotxtfile(input, output):
         my_output_file.close()
 ##################### End Function  #######################
 
-def main():
+def main(i):
     print('in main')
+    global files
     try:
         my_input_file = open(inputName ,"r", encoding='utf-8')
+        my_input_file_reaction = open('../../process/' + files[i-1]+'.txt' ,"r", encoding='utf-8')
+        print(files[i-1])
     except IOError as e:
         print("I/O error({0}): {1}".format(e.errno, e.strerror))
     conflictNum = 0
@@ -50,20 +53,30 @@ def main():
     global writer1
     global writer2
 
+
     if not my_input_file.closed:
         text_list = []
         text_list2 = []
         rr = ''
+        index = 0
+        reaction_lines = my_input_file_reaction.readlines()
+        print(i)
         for line in (my_input_file.readlines()):
-            #print(line)
+            print(reaction_lines[index])
+            print(index)
+            print(i)
+            print(files[i - 1])
             line = line.split()
-            issueid = int(line[0])
-            like = int(line[4])
-            dislike = int(line[5])
-            laugh = int(line[6])
-            hooray = int(line[7])
-            confused = int(line[8])
-            heart = int(line[9])
+            reaction_lines[index] = reaction_lines[index].split()
+            print(reaction_lines[index])
+            print(line)
+            issueid = int((reaction_lines[index])[0])
+            like = int((reaction_lines[index])[4])
+            dislike = int((reaction_lines[index])[5])
+            laugh = int((reaction_lines[index])[6])
+            hooray = int((reaction_lines[index])[7])
+            confused = int((reaction_lines[index])[8])
+            heart = int((reaction_lines[index])[9])
             pos = int(line[-2])
             neg = int(line[-1])
             #print(issueid, like, dislike, laugh, hooray, confused, heart, pos, neg)
@@ -108,6 +121,8 @@ def main():
             #print (text_list)
             #print (rr)
             #text_list.append(" ".join(l))
+            index +=1
+
 
         my_input_file.close()
 
@@ -139,6 +154,8 @@ totalNeg = 0
 totalKhonsa = 0
 fileName = './result/summary_result_v1.txt'
 
+files = ['Automattic_wp-calypso_issues_sammary.process', 'dotnet_corefx_issues_sammary.process' , 'explosion_spaCy_issues_sammary.process' , 'facebook_create-react-app_issues_sammary.process' , 'FortAwesome_Font-Awesome_issues_sammary.process' , 'GoogleChrome_puppeteer_issues_sammary.process' , 'ionic-team_ionic_issues_sammary.process' , 'kubernetes_kubernetes_issues_sammary.process' , 'rails_rails_issues_sammary.process' , 'signalapp_Signal-Android_issues_sammary.process' , 'TryGhost_Ghost_issues_sammary.process' , 'zdotnet_coreclr_issues_sammary.process' , 'zmaterial-components_material-components-web_issues_sammary.process', 'zMicrosoft_vscode_issues_sammary.process', 'ztensorflow_tensorflow_issues_sammary.process', 'ztwbs_bootstrap_issues_sammary.process']
+
 try:
     my_output_file = open(fileName, "w", encoding='utf-8')
 except IOError as e:
@@ -154,9 +171,9 @@ with open('./result/alloutput2' + '.csv', 'wb') as csv_file:
         # you can chose end of range 12 or 17
         for i in range(1,17):
             output = './result/output'+ str(i)
-            inputName = './senti/senti'+ str(i) + '.txt'
+            inputName = './senti/'+ str(i) + '.txt'
             print(inputName)
-            main()
+            main(i)
 
 print('Total results: ')
 print( 'conflict: ' + str(totalConflict))
