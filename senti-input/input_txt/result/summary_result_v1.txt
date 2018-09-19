@@ -1,0 +1,86 @@
+./senti/1.txt results: 
+conflict: 1
++ : 6
+- : 0
+khonsa: 3
+./senti/2.txt results: 
+conflict: 33
++ : 50
+- : 0
+khonsa: 54
+./senti/3.txt results: 
+conflict: 0
++ : 7
+- : 0
+khonsa: 3
+./senti/4.txt results: 
+conflict: 34
++ : 66
+- : 0
+khonsa: 74
+./senti/5.txt results: 
+conflict: 20
++ : 262
+- : 0
+khonsa: 111
+./senti/6.txt results: 
+conflict: 18
++ : 20
+- : 0
+khonsa: 29
+./senti/7.txt results: 
+conflict: 18
++ : 28
+- : 1
+khonsa: 69
+./senti/8.txt results: 
+conflict: 77
++ : 55
+- : 1
+khonsa: 128
+./senti/9.txt results: 
+conflict: 33
++ : 25
+- : 0
+khonsa: 50
+./senti/10.txt results: 
+conflict: 12
++ : 29
+- : 3
+khonsa: 36
+./senti/11.txt results: 
+conflict: 4
++ : 4
+- : 0
+khonsa: 5
+./senti/12.txt results: 
+conflict: 364
++ : 262
+- : 6
+khonsa: 667
+./senti/13.txt results: 
+conflict: 69
++ : 67
+- : 1
+khonsa: 152
+./senti/14.txt results: 
+conflict: 1625
++ : 3107
+- : 61
+khonsa: 3981
+./senti/15.txt results: 
+conflict: 518
++ : 428
+- : 12
+khonsa: 709
+./senti/16.txt results: 
+conflict: 322
++ : 401
+- : 14
+khonsa: 785
+#################################################
+Total results: 
+conflict: 3148
++ : 4817
+- : 99
+khonsa: 6856
