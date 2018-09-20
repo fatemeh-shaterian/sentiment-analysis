@@ -29,8 +29,8 @@ class User:
 dirpath = "./senti-se-out"
 os.chdir(dirpath)
 
-#replace username and password field with valid username and password value
 
+#replace username and password field with valid username and password value
 username = 'username'
 password = 'password'
 
