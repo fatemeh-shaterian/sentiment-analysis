@@ -19,9 +19,9 @@ from string import punctuation
 #HTML_parser = HTMLParser.HTMLParser()
 import itertools
 #filename = 'TryGhost_Ghost_issues_sammary'
-
-username = 'zkasiri'
-password = 'zhr15489'
+#replace username and password field with valid username and password value
+username = 'user'
+password = 'pass'
 files = [ 'zdotnet_coreclr_issues_sammary', 'zmaterial-components_material-components-web_issues_sammary', 'zMicrosoft_vscode_issues_sammary', 'ztensorflow_tensorflow_issues_sammary', 'ztwbs_bootstrap_issues_sammary']
 #files = ['Automattic_wp-calypso_issues_sammary', 'dotnet_corefx_issues_sammary' , 'explosion_spaCy_issues_sammary' , 'facebook_create-react-app_issues_sammary' , 'FortAwesome_Font-Awesome_issues_sammary' , 'GoogleChrome_puppeteer_issues_sammary' , 'ionic-team_ionic_issues_sammary' , 'kubernetes_kubernetes_issues_sammary' , 'rails_rails_issues_sammary' , 'signalapp_Signal-Android_issues_sammary' , 'TryGhost_Ghost_issues_sammary', 'zdotnet_coreclr_issues_sammary' , 'zmaterial-components_material-components-web_issues_sammary', 'zMicrosoft_vscode_issues_sammary', 'ztensorflow_tensorflow_issues_sammary', 'ztwbs_bootstrap_issues_sammary']
 #files = [ 'GoogleChrome_puppeteer_issues_sammary']
