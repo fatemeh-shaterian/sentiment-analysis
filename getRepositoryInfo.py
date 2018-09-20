@@ -1,4 +1,5 @@
 import requests
+#replace username and password field with valid username and password value
 username = 'username'
 password = 'pass'
 #https://api.github.com/repos/rust-lang-nursery/edition-guide/issues
