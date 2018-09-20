@@ -1,6 +1,6 @@
 import requests
-username = 'zkasiri'
-password = 'zhr15489'
+username = 'username'
+password = 'pass'
 #https://api.github.com/repos/rust-lang-nursery/edition-guide/issues
 rep_url = "https://api.github.com/repos/Automattic/wp-calypso/issues?state=all&page=1";
 headers = {'Accept': 'application/vnd.github.squirrel-girl-preview'}
