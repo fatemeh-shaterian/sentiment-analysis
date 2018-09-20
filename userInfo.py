@@ -28,9 +28,11 @@ class User:
 
 dirpath = "./senti-se-out"
 os.chdir(dirpath)
+
 #replace username and password field with valid username and password value
+
 username = 'username'
-password = 'pass'
+password = 'password'
 
 
 ############### A Function for Writing Output to Text File  #################
