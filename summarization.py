@@ -28,8 +28,8 @@ class JsonObj:
 
 
 #replace username and password field with valid username and password value
-username = 'user'
-password = 'pass'
+username = 'username'
+password = 'password'
 files = ['Automattic_wp-calypso_issues', 'dotnet_corefx_issues' , 'explosion_spaCy_issues' , 'facebook_create-react-app_issues' , 'FortAwesome_Font-Awesome_issues' , 'GoogleChrome_puppeteer_issues' , 'ionic-team_ionic_issues' , 'kubernetes_kubernetes_issues' , 'rails_rails_issues' , 'signalapp_Signal-Android_issues' , 'TryGhost_Ghost_issues' ,'zdotnet_coreclr_issues' , 'zmaterial-components_material-components-web_issues', 'zMicrosoft_vscode_issues', 'ztensorflow_tensorflow_issues', 'ztwbs_bootstrap_issues']
 #files = [ 'GoogleChrome_puppeteer_issues' ]
 
